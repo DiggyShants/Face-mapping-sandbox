@@ -59,6 +59,18 @@ function onResults(results) {
         canvasCtx.translate(nose.x * canvasElement.width, nose.y * canvasElement.height); // Move to nose
         canvasCtx.rotate(angle); // Rotate to match head tilt
         canvasCtx.scale(scale, scale); // Scale to match head distance
+
+        // --- THE FIX IS HERE ---
+        // Only draw if the image loaded successfully
+        if (maskImage.complete && maskImage.naturalWidth !== 0) {
+            canvasCtx.drawImage(maskImage, -150, -200, 300, 400); 
+        } else {
+            // Optional: Draw a red box placeholder so you know the math works even if the image fails
+            canvasCtx.strokeStyle = "red";
+            canvasCtx.lineWidth = 5;
+            canvasCtx.strokeRect(-50, -50, 100, 100);
+        }
+        // -----------------------
         
         // Draw image centered on the nose (adjust -100, -150 to align your specific PNG)
         canvasCtx.drawImage(maskImage, -150, -200, 300, 400); 
