@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Deepfake Educational Sandbox</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/@mediapipe/camera_utils/camera_utils.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@mediapipe/control_utils/control_utils.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@mediapipe/drawing_utils/drawing_utils.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@mediapipe/face_mesh/face_mesh.js" crossorigin="anonymous"></script>
+</head>
+<body>
+
+    <div class="container">
+        <h1>The "Deepfake" Sandbox</h1>
+        <p>Step 1: See how the computer sees you. Step 2: Apply the mask.</p>
+        
+        <div class="canvas-wrapper">
+            <video class="input_video"></video>
+            <canvas class="output_canvas" width="1280" height="720"></canvas>
+        </div>
+
+        <div class="controls">
+            <button onclick="toggleMesh()">Toggle 1: Show Face Mesh (The Math)</button>
+            <button onclick="toggleMask()">Toggle 2: Apply Lincoln Mask (The Fake)</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
