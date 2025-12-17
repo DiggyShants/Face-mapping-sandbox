@@ -18,9 +18,13 @@ body {
     box-shadow: 0 10px 20px rgba(0,0,0,0.2);
 }
 
-/* Force video and canvas to overlap perfectly */
 .input_video {
-    display: none; /* We hide the raw video and redraw it on the canvas */
+    /* Don't remove it from the DOM, just hide it visually */
+    position: absolute;
+    opacity: 0; 
+    width: 1px;
+    height: 1px;
+    z-index: -1;
 }
 
 .output_canvas {
