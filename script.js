@@ -80,8 +80,8 @@ function onResults(results) {
 
         if (isImageLoaded) {
             // SETTINGS: Adjust the Mask Size Here
-            const maskWidth = 220;  // Was 300 (Smaller now)
-            const maskHeight = 290; // Was 400 (Smaller now)
+            const maskWidth = 150;  // Was 300 (Smaller now)
+            const maskHeight = 250; // Was 400 (Smaller now)
             const xOffset = -maskWidth / 2; // Centers the image horizontally
             const yOffset = -maskHeight / 1.8; // Moves image up/down to align with nose
 
